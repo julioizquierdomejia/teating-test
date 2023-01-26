@@ -35,15 +35,20 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('h1')?.textContent).toContain('testing');
   });
 
+
   it('should add two number, multiplicar(num1:number, num2:number)', ()=>{
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
 
-    const mockeData = { valor1: 1, valor2: 3};
-    const expectedResult = 3;
+    const data = { valor1: 2, valor2: 2};
+    const expectedResult = 4;
 
-    const result = app.multiplicar(mockeData.valor1, mockeData.valor2);
+    const result = app.multiplicar(data.valor1, data.valor2);
     expect(result).toEqual(expectedResult);
   })
+  
+
+  
+  
 
 });
